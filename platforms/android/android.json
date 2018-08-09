@@ -1,0 +1,113 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"WebEngagePlugin\"><param name=\"android-package\" value=\"com.webengage.cordova.WebEngagePlugin\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"com.google.android.c2dm.permission.RECEIVE\" />",
+              "count": 3
+            },
+            {
+              "xml": "<uses-permission android:name=\"${applicationId}.permission.C2D_MESSAGE\" />",
+              "count": 3
+            },
+            {
+              "xml": "<permission android:name=\"${applicationId}.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
+              "count": 3
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<receiver android:exported=\"true\" android:name=\"com.webengage.sdk.android.InstallTracker\"><intent-filter><action android:name=\"com.android.vending.INSTALL_REFERRER\" /></intent-filter></receiver>",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:name=\"com.webengage.sdk.android.WebEngagePushReceiver\" android:permission=\"com.google.android.c2dm.permission.SEND\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /><category android:name=\"${applicationId}\" /></intent-filter></receiver>",
+              "count": 3
+            },
+            {
+              "xml": "<meta-data android:name=\"com.webengage.sdk.android.key\" android:value=\"~13410522d\" />",
+              "count": 3
+            },
+            {
+              "xml": "<meta-data android:name=\"com.webengage.sdk.android.debug\" android:value=\"true\" />",
+              "count": 3
+            },
+            {
+              "xml": "<meta-data android:name=\"com.webengage.sdk.android.project_number\" android:value=\"$76932207205\" />",
+              "count": 3
+            },
+            {
+              "xml": "<meta-data android:name=\"com.webengage.sdk.android.location_tracking\" android:value=\"true\" />",
+              "count": 3
+            },
+            {
+              "xml": "<meta-data android:name=\"com.webengage.sdk.android.auto_gcm_registration\" android:value=\"true\" />",
+              "count": 3
+            },
+            {
+              "xml": "<meta-data android:name=\"com.webengage.sdk.android.alternate_interface_id\" android:value=\"false\" />",
+              "count": 3
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "ionic.webengage.test"
+    },
+    "cordova-plugin-webengage": {
+      "PACKAGE_NAME": "ionic.webengage.test"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-webengage.WebEngagePlugin",
+      "file": "plugins/cordova-plugin-webengage/www/WebEngagePlugin.js",
+      "pluginId": "cordova-plugin-webengage",
+      "clobbers": [
+        "webengage"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-webengage": "1.0.0"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "_from": "git+https://github.com/WebEngage/cordova-plugin.git",
+  "_id": "cordova-plugin-webengage@1.0.0",
+  "_inBundle": false,
+  "_location": "/cordova-plugin-webengage",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/WebEngage/cordova-plugin.git",
+    "rawSpec": "https://github.com/WebEngage/cordova-plugin.git",
+    "saveSpec": "git+https://github.com/WebEngage/cordova-plugin.git",
+    "fetchSpec": "https://github.com/WebEngage/cordova-plugin.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/WebEngage/cordova-plugin.git#a0e5a780168de7bcc906aca8671f2f873cbb1331",
+  "_spec": "https://github.com/WebEngage/cordova-plugin.git",
+  "_where": "/Users/ashwin/cordova/WebEngageTest",
+  "author": {
+    "name": "arpit@webklipper.com"
+  },
+  "bugs": {
+    "url": "https://github.com/WebEngage/cordova-plugin/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "plist": "^2.0.1",
+    "xml2js": "^0.4.17"
+  },
+  "deprecated": false,
+  "description": "WebEngage Plugin that integrates with WebEngage native SDKs(Android & iOS) to provide engagement capabilities for hybrid applications built with PhoneGap/Cordova",
+  "devDependencies": {},
+  "engines": {
+    "cordovaDependencies": {
+      "0.0.1": {
+        "cordova-android": ">=4.1.0",
+        "cordova-ios": ">=4.0.0"
+      }
+    }
+  },
+  "homepage": "https://github.com/WebEngage/cordova-plugin#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android-webengage",
+    "cordova-ios-webengage",
+    "webengage",
+    "push-notifications",
+    "analytics",
+    "engagement",
+    "notifications"
+  ],
+  "license": "ISC",
+  "main": "WebEngagePlugin.js",
+  "name": "cordova-plugin-webengage",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/WebEngage/cordova-plugin.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

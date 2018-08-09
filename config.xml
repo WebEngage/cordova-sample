@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.webengage.cordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Cordova WebEngage Test</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+  </description>
+    <author email="ashwin.dinesh@webklipper.com" href="https://www.webengage.com/">
+        Ashwin
+  </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-webengage" spec="https://github.com/WebEngage/cordova-plugin.git" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <receiver android:name="com.webengage.sdk.android.WebEngagePushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+                <intent-filter>
+                    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                    <category android:name="${applicationId}" />
+                </intent-filter>
+            </receiver>
+            <meta-data android:name="com.webengage.sdk.android.key" android:value="YOUR-LICENSE-CODE" />
+            <meta-data android:name="com.webengage.sdk.android.debug" android:value="true" />
+            <meta-data android:name="com.webengage.sdk.android.project_number" android:value="$GCM_PROJECT_NUMBER" />
+            <meta-data android:name="com.webengage.sdk.android.location_tracking" android:value="true" />
+            <meta-data android:name="com.webengage.sdk.android.auto_gcm_registration" android:value="true" />
+            <meta-data android:name="com.webengage.sdk.android.alternate_interface_id" android:value="false" />
+        </config-file>
+        <config-file parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+            <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
+            <permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+        </config-file>
+    </platform>
+    <platform name="ios">
+        <config-file parent="WEGLicenseCode" target="*-Info.plist">
+            <string>YOUR-LICENSE-CODE</string>
+        </config-file>
+        <config-file parent="WEGApnsAutoRegister" target="*-Info.plist">
+            <true />
+        </config-file>
+        <config-file parent="WEGLogLevel" target="*-Info.plist">
+            <string>VERBOSE</string>
+        </config-file>
+    </platform>
+    <engine name="android" spec="^7.0.0" />
+    <engine name="ios" spec="^4.5.5" />
+</widget>

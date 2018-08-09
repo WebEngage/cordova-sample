@@ -1,0 +1,339 @@
+-- Merging decision tree log ---
+category#com.webengage.cordova
+INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:24:17-61
+	android:name
+		INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:24:27-58
+uses-permission#com.webengage.cordova.permission.C2D_MESSAGE
+INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:36:5-79
+	android:name
+		INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:5:22-81
+permission#com.webengage.cordova.permission.C2D_MESSAGE
+INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:37:5-110
+	android:protectionLevel
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:35:77-112
+	android:name
+		INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:35:17-76
+manifest
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+MERGED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:2:1-32:12
+MERGED from [com.google.android.gms:play-services-gcm:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/abfbf83d402016f6ed0a7500154727be/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/784fb60ac158828c5684ee788b935aa3/AndroidManifest.xml:2:1-9:12
+MERGED from [:CordovaLib] /Users/ashwin/cordova/WebEngageTest/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
+MERGED from [com.google.android.gms:play-services-iid:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-iid-15.0.1.aar/7640d172c3c553f44e121b64cd68c017/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/00565563f58cba00a79fea9de6d1d79d/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/259ff7b42ccae442231de381dbc06eca/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1eb458fc3bd5328302ca3323127aba9e/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/fac9afdc4f1701905ae777fb8688a19c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/3048634138b2b51fd1979b7ea01c4dc3/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/58ec4ea680afc8e64785724ae32929d2/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/0ca2d5c38701e9a6ffc9e0c123086367/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8a196d0c96baa5c35b008965b8b6068d/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/0071f940c8dff59bbf1dde0aa6391900/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/7f143b3c601f1651d8214b8fe9c14119/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/360d4caae3014a3dd9e5092084d1cc6f/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/99fb0551072540971ab3852de77e6036/AndroidManifest.xml:17:1-30:12
+INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:1-38:12
+	package
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:102-133
+		INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:74-101
+		INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml
+	android:hardwareAccelerated
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:11-45
+	xmlns:android
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:134-192
+	android:versionCode
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:2:46-73
+		INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml
+supports-screens
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:3:5-191
+	android:largeScreens
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:3:49-76
+	android:smallScreens
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:3:132-159
+	android:normalScreens
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:3:77-105
+	android:xlargeScreens
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:3:160-188
+	android:resizeable
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:3:106-131
+	android:anyDensity
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:3:23-48
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:4:5-82
+MERGED from [com.google.android.gms:play-services-gcm:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/abfbf83d402016f6ed0a7500154727be/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-gcm:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/abfbf83d402016f6ed0a7500154727be/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-iid-15.0.1.aar/7640d172c3c553f44e121b64cd68c017/AndroidManifest.xml:23:5-82
+MERGED from [com.google.android.gms:play-services-iid:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-iid-15.0.1.aar/7640d172c3c553f44e121b64cd68c017/AndroidManifest.xml:23:5-82
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:4:22-79
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:6:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:7:5-67
+MERGED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:11:5-67
+MERGED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-gcm:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/abfbf83d402016f6ed0a7500154727be/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-gcm:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/abfbf83d402016f6ed0a7500154727be/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-iid-15.0.1.aar/7640d172c3c553f44e121b64cd68c017/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-iid-15.0.1.aar/7640d172c3c553f44e121b64cd68c017/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:7:22-64
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:8:5-68
+MERGED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:12:5-68
+MERGED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:12:5-68
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:8:22-65
+application
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:9:5-33:19
+MERGED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:14:5-30:19
+MERGED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:14:5-30:19
+MERGED from [com.google.android.gms:play-services-gcm:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/abfbf83d402016f6ed0a7500154727be/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-gcm:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/abfbf83d402016f6ed0a7500154727be/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/784fb60ac158828c5684ee788b935aa3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/784fb60ac158828c5684ee788b935aa3/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-iid:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-iid-15.0.1.aar/7640d172c3c553f44e121b64cd68c017/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-iid-15.0.1.aar/7640d172c3c553f44e121b64cd68c017/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/00565563f58cba00a79fea9de6d1d79d/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/00565563f58cba00a79fea9de6d1d79d/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/259ff7b42ccae442231de381dbc06eca/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/259ff7b42ccae442231de381dbc06eca/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1eb458fc3bd5328302ca3323127aba9e/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1eb458fc3bd5328302ca3323127aba9e/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/fac9afdc4f1701905ae777fb8688a19c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/fac9afdc4f1701905ae777fb8688a19c/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/3048634138b2b51fd1979b7ea01c4dc3/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/3048634138b2b51fd1979b7ea01c4dc3/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/58ec4ea680afc8e64785724ae32929d2/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/58ec4ea680afc8e64785724ae32929d2/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/0ca2d5c38701e9a6ffc9e0c123086367/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/0ca2d5c38701e9a6ffc9e0c123086367/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8a196d0c96baa5c35b008965b8b6068d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8a196d0c96baa5c35b008965b8b6068d/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/0071f940c8dff59bbf1dde0aa6391900/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/0071f940c8dff59bbf1dde0aa6391900/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/7f143b3c601f1651d8214b8fe9c14119/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/7f143b3c601f1651d8214b8fe9c14119/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/360d4caae3014a3dd9e5092084d1cc6f/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/360d4caae3014a3dd9e5092084d1cc6f/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/99fb0551072540971ab3852de77e6036/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/99fb0551072540971ab3852de77e6036/AndroidManifest.xml:24:5-28:19
+	android:supportsRtl
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:9:114-140
+	android:label
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:9:81-113
+	android:hardwareAccelerated
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:9:18-52
+	android:icon
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:9:53-80
+activity#com.webengage.cordova.MainActivity
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:10:9-15:20
+	android:label
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:10:97-134
+	android:launchMode
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:10:135-165
+	android:windowSoftInputMode
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:10:257-299
+	android:configChanges
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:10:19-96
+	android:theme
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:10:194-256
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:10:166-193
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:11:13-14:29
+	android:label
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:11:28-65
+action#android.intent.action.MAIN
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:12:17-69
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:12:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:13:17-77
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:13:27-74
+receiver#com.webengage.sdk.android.InstallTracker
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:16:9-20:20
+	android:exported
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:16:19-42
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:16:43-98
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:17:13-19:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:18:17-79
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:18:25-76
+receiver#com.webengage.sdk.android.WebEngagePushReceiver
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:21:9-26:20
+	android:permission
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:21:82-142
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:21:19-81
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.webengage.cordova
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:22:13-25:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:23:17-81
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:23:25-78
+meta-data#com.webengage.sdk.android.key
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:27:9-94
+	android:value
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:27:65-91
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:27:20-64
+meta-data#com.webengage.sdk.android.debug
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:28:9-90
+	android:value
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:28:67-87
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:28:20-66
+meta-data#com.webengage.sdk.android.project_number
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:29:9-107
+	android:value
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:29:76-104
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:29:20-75
+meta-data#com.webengage.sdk.android.location_tracking
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:30:9-102
+	android:value
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:30:79-99
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:30:20-78
+meta-data#com.webengage.sdk.android.auto_gcm_registration
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:31:9-106
+	android:value
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:31:83-103
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:31:20-82
+meta-data#com.webengage.sdk.android.alternate_interface_id
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:32:9-108
+	android:value
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:32:84-105
+	android:name
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:32:20-83
+uses-sdk
+ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:34:5-74
+MERGED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:7:5-9:41
+MERGED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-gcm:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/abfbf83d402016f6ed0a7500154727be/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gcm:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-gcm-15.0.1.aar/abfbf83d402016f6ed0a7500154727be/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/784fb60ac158828c5684ee788b935aa3/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-location-15.0.1.aar/784fb60ac158828c5684ee788b935aa3/AndroidManifest.xml:5:5-44
+MERGED from [:CordovaLib] /Users/ashwin/cordova/WebEngageTest/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] /Users/ashwin/cordova/WebEngageTest/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [com.google.android.gms:play-services-iid:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-iid-15.0.1.aar/7640d172c3c553f44e121b64cd68c017/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-iid-15.0.1.aar/7640d172c3c553f44e121b64cd68c017/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/00565563f58cba00a79fea9de6d1d79d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/00565563f58cba00a79fea9de6d1d79d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/259ff7b42ccae442231de381dbc06eca/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-stats-15.0.1.aar/259ff7b42ccae442231de381dbc06eca/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1eb458fc3bd5328302ca3323127aba9e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-15.0.1.aar/1eb458fc3bd5328302ca3323127aba9e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/fac9afdc4f1701905ae777fb8688a19c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-tasks-15.0.1.aar/fac9afdc4f1701905ae777fb8688a19c/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/3048634138b2b51fd1979b7ea01c4dc3/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/3048634138b2b51fd1979b7ea01c4dc3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/58ec4ea680afc8e64785724ae32929d2/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/58ec4ea680afc8e64785724ae32929d2/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/0ca2d5c38701e9a6ffc9e0c123086367/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/0ca2d5c38701e9a6ffc9e0c123086367/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8a196d0c96baa5c35b008965b8b6068d/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8a196d0c96baa5c35b008965b8b6068d/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/0071f940c8dff59bbf1dde0aa6391900/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/0071f940c8dff59bbf1dde0aa6391900/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/7f143b3c601f1651d8214b8fe9c14119/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/7f143b3c601f1651d8214b8fe9c14119/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/360d4caae3014a3dd9e5092084d1cc6f/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/360d4caae3014a3dd9e5092084d1cc6f/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/99fb0551072540971ab3852de77e6036/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/99fb0551072540971ab3852de77e6036/AndroidManifest.xml:20:5-22:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/58ec4ea680afc8e64785724ae32929d2/AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:34:42-71
+	android:minSdkVersion
+		ADDED from /Users/ashwin/cordova/WebEngageTest/platforms/android/app/src/main/AndroidManifest.xml:34:15-41
+service#com.webengage.sdk.android.ExecutorService
+ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:15:9-77
+	android:name
+		ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:15:18-74
+service#com.webengage.sdk.android.EventLogService
+ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:16:9-77
+	android:name
+		ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:16:18-74
+activity#com.webengage.sdk.android.actions.render.WebEngageActivity
+ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:18:9-21:64
+	android:configChanges
+		ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:20:13-59
+	android:theme
+		ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:21:13-61
+	android:name
+		ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:19:13-86
+receiver#com.webengage.sdk.android.WebEngageReceiver
+ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:23:9-29:20
+	android:name
+		ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:23:19-77
+intent-filter#${applicationId}+com.webengage.sdk.android.intent.ACTION
+ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:24:13-28:29
+intent-filter#com.webengage.cordova+com.webengage.sdk.android.intent.ACTION
+ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:24:13-28:29
+action#com.webengage.sdk.android.intent.ACTION
+ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:25:17-82
+	android:name
+		ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:25:25-79
+category#${applicationId}
+ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:27:17-61
+	android:name
+		ADDED from [com.webengage:android-sdk:3.7.3] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/android-sdk-3.7.3.aar/a6bbb1a41c76a5e98af7322f55592401/AndroidManifest.xml:27:27-58
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/00565563f58cba00a79fea9de6d1d79d/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/00565563f58cba00a79fea9de6d1d79d/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/00565563f58cba00a79fea9de6d1d79d/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-base-15.0.1.aar/00565563f58cba00a79fea9de6d1d79d/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/3048634138b2b51fd1979b7ea01c4dc3/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/3048634138b2b51fd1979b7ea01c4dc3/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:15.0.1] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/play-services-basement-15.0.1.aar/3048634138b2b51fd1979b7ea01c4dc3/AndroidManifest.xml:24:13-58
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/58ec4ea680afc8e64785724ae32929d2/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/0ca2d5c38701e9a6ffc9e0c123086367/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/0ca2d5c38701e9a6ffc9e0c123086367/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8a196d0c96baa5c35b008965b8b6068d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/8a196d0c96baa5c35b008965b8b6068d/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/0071f940c8dff59bbf1dde0aa6391900/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/0071f940c8dff59bbf1dde0aa6391900/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/7f143b3c601f1651d8214b8fe9c14119/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/7f143b3c601f1651d8214b8fe9c14119/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/360d4caae3014a3dd9e5092084d1cc6f/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/360d4caae3014a3dd9e5092084d1cc6f/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v4:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/58ec4ea680afc8e64785724ae32929d2/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v4:26.1.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/58ec4ea680afc8e64785724ae32929d2/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/99fb0551072540971ab3852de77e6036/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/99fb0551072540971ab3852de77e6036/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/ashwin/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/99fb0551072540971ab3852de77e6036/AndroidManifest.xml:26:13-58
