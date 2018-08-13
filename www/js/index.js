@@ -34,7 +34,25 @@ var app = {
         webengage.engage();
 
         // Events tracking
-        webengage.track("App Open", null);
+        webengage.track("App Opened");
+
+        // Push notification callbacks
+        webengage.push.onClick(function(deeplink, customData) {
+            console.log("Push notification clicked");
+        });
+
+        // In-app notification callbacks
+        webengage.notification.onShown(function(inAppData) {
+            console.log("In-app shown");
+        });
+
+        webengage.notification.onClick(function(inAppData, actionId) {
+            console.log("In-app notification clicked");
+        });
+
+        webengage.notification.onDismiss(function(inAppData) {
+            console.log("In-app notification dismissed");
+        });
     },
 
     // Update DOM on a Received Event
@@ -65,20 +83,22 @@ function init() {
 
 document.getElementById("log-button").addEventListener("click", function() {
     var prevUserid = window.localStorage.getItem("userid");
-    if (prevUserid === null || prevUserid == "") {
-        // Login
+    if (prevUserid === undefined || prevUserid === null || prevUserid === "") {
         var userid = document.getElementById('userid-input').value;
         if (userid != null && userid != "") {
             window.localStorage.setItem("userid", userid);
             document.getElementById('log-button').textContent = "LOGOUT";
             document.getElementById('userid-input').value = userid;
+
+            // Login
             webengage.user.login(userid);
         }
     } else {
-        // Logout
         window.localStorage.setItem("userid", "");
         document.getElementById('userid-input').value = "";
         document.getElementById('log-button').textContent = "LOGIN";
+
+        // Logout
         webengage.user.logout();
     }
 });
@@ -92,8 +112,8 @@ document.getElementById("email-button").addEventListener("click", function() {
 
 document.getElementById("track-button").addEventListener("click", function() {
     var event = document.getElementById("event-input").value;
-    if (event != null && event != "") {
-        webengage.track(event, null);
+    if (event !== undefined && event != null && event != "") {
+        webengage.track(event);
     }
 });
 

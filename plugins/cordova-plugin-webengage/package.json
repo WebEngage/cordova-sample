@@ -16,7 +16,7 @@
     "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/WebEngage/cordova-plugin.git#a0e5a780168de7bcc906aca8671f2f873cbb1331",
+  "_resolved": "git+https://github.com/WebEngage/cordova-plugin.git#55ff10685040f0e7a8a2c011934a252024ebbb59",
   "_spec": "https://github.com/WebEngage/cordova-plugin.git",
   "_where": "/Users/ashwin/cordova/WebEngageTest",
   "author": {

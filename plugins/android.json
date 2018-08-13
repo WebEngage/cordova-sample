@@ -8,10 +8,10 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "ionic.webengage.test"
+      "PACKAGE_NAME": "com.webengage.cordova"
     },
     "cordova-plugin-webengage": {
-      "PACKAGE_NAME": "ionic.webengage.test"
+      "PACKAGE_NAME": "com.webengage.cordova"
     }
   },
   "dependent_plugins": {}

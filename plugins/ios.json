@@ -7,10 +7,10 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-webengage": {
       "PACKAGE_NAME": "com.webengage.cordova"
     },
-    "cordova-plugin-webengage": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.webengage.cordova"
     }
   },
