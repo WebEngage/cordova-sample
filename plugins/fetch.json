@@ -10,7 +10,15 @@
   "cordova-plugin-webengage": {
     "source": {
       "type": "registry",
-      "id": "https://github.com/WebEngage/cordova-plugin.git"
+      "id": "cordova-plugin-webengage@^1.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-android-fcm": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/WebEngage/cordova-plugin-android-fcm.git"
     },
     "is_top_level": true,
     "variables": {}

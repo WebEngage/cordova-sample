@@ -4,7 +4,11 @@ platforms/
 !plugins/
 plugins/*
 !plugins/cordova-plugin-webengage
+!plugins/cordova-plugin-android-fcm
 
 res/
 
 package-lock.json
+google-services.json
+
+.DS_Store

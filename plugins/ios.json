@@ -12,6 +12,9 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.webengage.cordova"
+    },
+    "cordova-plugin-android-fcm": {
+      "PACKAGE_NAME": "com.webengage.cordova"
     }
   },
   "dependent_plugins": {}
