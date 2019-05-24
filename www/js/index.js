@@ -53,6 +53,8 @@ var app = {
         webengage.notification.onDismiss(function(inAppData) {
             console.log("In-app notification dismissed");
         });
+
+        androidfcm.updateToken();
     },
 
     // Update DOM on a Received Event

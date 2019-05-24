@@ -1,6 +1,6 @@
 {
   "_from": "git+https://github.com/WebEngage/cordova-plugin-android-fcm.git",
-  "_id": "cordova-plugin-android-fcm@0.0.1",
+  "_id": "cordova-plugin-android-fcm@0.0.2",
   "_inBundle": false,
   "_location": "/cordova-plugin-android-fcm",
   "_phantomChildren": {},
@@ -16,11 +16,14 @@
     "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/WebEngage/cordova-plugin-android-fcm.git#71e632f26a86b72b63cfb5b7c7f255acb88bb0c0",
+  "_resolved": "git+https://github.com/WebEngage/cordova-plugin-android-fcm.git#04f37f66a82134b50160722693eefe92bec86a59",
   "_spec": "https://github.com/WebEngage/cordova-plugin-android-fcm.git",
   "_where": "/Users/ashwin/cordova/WebEngageTest",
   "author": {
     "name": "Ashwin Dinesh"
+  },
+  "bugs": {
+    "url": "https://github.com/WebEngage/cordova-plugin-android-fcm/issues"
   },
   "bundleDependencies": false,
   "cordova": {
@@ -31,11 +34,16 @@
   },
   "deprecated": false,
   "description": "Cordova plugin for Android FCM service.",
+  "homepage": "https://github.com/WebEngage/cordova-plugin-android-fcm#readme",
   "keywords": [
     "ecosystem:cordova",
     "cordova-android"
   ],
   "license": "ISC",
   "name": "cordova-plugin-android-fcm",
-  "version": "0.0.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebEngage/cordova-plugin-android-fcm.git"
+  },
+  "version": "0.0.2"
 }
