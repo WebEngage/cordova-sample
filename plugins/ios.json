@@ -7,13 +7,13 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-android-fcm": {
+      "PACKAGE_NAME": "com.webengage.cordova"
+    },
     "cordova-plugin-webengage": {
       "PACKAGE_NAME": "com.webengage.cordova"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.webengage.cordova"
-    },
-    "cordova-plugin-android-fcm": {
       "PACKAGE_NAME": "com.webengage.cordova"
     }
   },

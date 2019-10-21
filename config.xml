@@ -24,13 +24,13 @@
             <meta-data android:name="com.webengage.sdk.android.debug" android:value="true" />
             <meta-data android:name="com.webengage.sdk.android.location_tracking" android:value="true" />
             <meta-data android:name="com.webengage.sdk.android.alternate_interface_id" android:value="false" />
-            
+
             <!-- For GCM (Deprecated) -->
             <!-- Not required if using FCM -->
             <!--
             <meta-data android:name="com.webengage.sdk.android.auto_gcm_registration" android:value="true" />
             <meta-data android:name="com.webengage.sdk.android.project_number" android:value="$GCM_PROJECT_NUMBER" />
-            
+
             <receiver android:name="com.webengage.sdk.android.WebEngagePushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
                 <intent-filter>
                     <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -65,6 +65,9 @@
             <array>
                 <string>location</string>
             </array>
+        </config-file>
+        <config-file parent="WEGEnvironment" target="*-Info.plist">
+            <string>IN</string>
         </config-file>
     </platform>
     <engine name="android" spec="^7.1.4" />
