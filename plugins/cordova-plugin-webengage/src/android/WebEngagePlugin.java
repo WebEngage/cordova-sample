@@ -478,7 +478,7 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
         return list;
     }
 
-    private JSONObject mergeJson(JSONObject jsonObject1, JSONObject jsonObject2) throws JSONException {
+    private static JSONObject mergeJson(JSONObject jsonObject1, JSONObject jsonObject2) throws JSONException {
         for (Iterator<String> it = jsonObject2.keys(); it.hasNext(); ) {
             String key = it.next();
             jsonObject1.put(key, jsonObject2.get(key));
