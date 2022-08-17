@@ -54,7 +54,6 @@ var app = {
             console.log("In-app notification dismissed");
         });
 
-        androidfcm.updateToken();
     },
 
     // Update DOM on a Received Event
@@ -73,6 +72,7 @@ var app = {
 app.initialize();
 
 function init() {
+
     var userid = window.localStorage.getItem("userid");
     if (userid != null && userid != "") {
         document.getElementById('userid-input').value = userid;
@@ -81,6 +81,15 @@ function init() {
         document.getElementById('userid-input').value = "";
         document.getElementById('log-button').textContent = "LOGIN";
     }
+
+    var pushStatus = window.localStorage.getItem("push-opt");
+    if(pushStatus == false){
+        document.getElementById("push-opt-button").checked = false;
+    }
+    else{
+        document.getElementById("push-opt-button").checked = true;
+    }
+
 };
 
 document.getElementById("log-button").addEventListener("click", function() {
@@ -120,5 +129,15 @@ document.getElementById("track-button").addEventListener("click", function() {
 });
 
 document.getElementById("buy-button").addEventListener("click", function() {
+    console.log("Clicked on buy");
+
     webengage.track("Purchased", {"product-id": "123", "product-name": "wrist-watch", "product-price": 25.65});
 });
+
+document.getElementById("push-opt-button").addEventListener("click", function() {
+    console.log("Clicked on Opt");
+    var pushStatus = document.getElementById("push-opt-button").checked;
+    webengage.user.setDevicePushOptIn(pushStatus);
+    window.localStorage.setItem("push-opt", pushStatus);
+});
+
