@@ -1,33 +1,36 @@
 {
-  "_from": "git+https://github.com/WebEngage/cordova-plugin.git",
-  "_id": "cordova-plugin-webengage@1.0.0",
+  "_from": "cordova-plugin-webengage@^1.0.0",
+  "_id": "cordova-plugin-webengage@1.0.5",
   "_inBundle": false,
+  "_integrity": "sha512-/mkuYhlBneZHfGLj4HfzbuGX7pXc7W0+YrN3XvCWgbbslvilyDEdT9uYSNJBrreaOyQSYmj7rO1oKnbQXHX0Wg==",
   "_location": "/cordova-plugin-webengage",
   "_phantomChildren": {},
   "_requested": {
-    "type": "git",
-    "raw": "https://github.com/WebEngage/cordova-plugin.git",
-    "rawSpec": "https://github.com/WebEngage/cordova-plugin.git",
-    "saveSpec": "git+https://github.com/WebEngage/cordova-plugin.git",
-    "fetchSpec": "https://github.com/WebEngage/cordova-plugin.git",
-    "gitCommittish": null
+    "type": "range",
+    "registry": true,
+    "raw": "cordova-plugin-webengage@^1.0.0",
+    "name": "cordova-plugin-webengage",
+    "escapedName": "cordova-plugin-webengage",
+    "rawSpec": "^1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.0"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/WebEngage/cordova-plugin.git#55ff10685040f0e7a8a2c011934a252024ebbb59",
-  "_spec": "https://github.com/WebEngage/cordova-plugin.git",
-  "_where": "/Users/ashwin/cordova/WebEngageTest",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-webengage/-/cordova-plugin-webengage-1.0.5.tgz",
+  "_shasum": "66eca7b81298b0ed4c86580c0bdc7f3a414bfb43",
+  "_spec": "cordova-plugin-webengage@^1.0.0",
+  "_where": "/Users/AdityaS/GitHubSDK/cordova-sample",
   "author": {
-    "name": "arpit@webklipper.com"
+    "name": "mobile@webengage.com"
   },
   "bugs": {
     "url": "https://github.com/WebEngage/cordova-plugin/issues"
   },
   "bundleDependencies": false,
   "dependencies": {
-    "plist": "^2.0.1",
+    "plist": "^3.0.2",
     "xml2js": "^0.4.17"
   },
   "deprecated": false,
@@ -35,7 +38,7 @@
   "devDependencies": {},
   "engines": {
     "cordovaDependencies": {
-      "0.0.1": {
+      "1.0.0": {
         "cordova-android": ">=4.1.0",
         "cordova-ios": ">=4.0.0"
       }
@@ -62,5 +65,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.0"
+  "version": "1.0.5"
 }

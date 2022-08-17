@@ -52,7 +52,7 @@ static WebEngagePlugin *webEngagePlugin;
 
 - (void)handlePushNotificationPendingDeepLinks {
     
-    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    AppDelegate* appDelegate = [AppDelegate sharedInstance];
     
     @synchronized (appDelegate) {
         
@@ -358,31 +358,38 @@ static WebEngagePlugin *webEngagePlugin;
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:inAppNotificationData options:0 error:nil];
     NSString *inAppJSON = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    
-    NSString* resultData = [WebEngagePlugin evaluateJavaScript:[NSString stringWithFormat:
-                                                                @"JSON.stringify(webengage.notification.onCallbackReceived( 'prepared', %@))",
-                                                                inAppJSON] onWebView:self.webView];
-    
+    [self.commandDelegate evalJs:
+         [NSString stringWithFormat:
+          @"webengage.notification.onCallbackReceived( 'prepared', %@)", inAppJSON]];
+    // TODO : Commedted due to
+    // Decided only to give callback for prepared
+    /*
+        NSString* resultData = [WebEngagePlugin evaluateJavaScript:[NSString stringWithFormat:
+                                                                    @"JSON.stringify(webengage.notification.onCallbackReceived( 'prepared', %@))",
+                                                                    inAppJSON] onWebView:self.webView];
 
-    NSMutableDictionary* modifiedData = nil;
-    if (resultData) {
-        NSData *data = [resultData dataUsingEncoding:NSUTF8StringEncoding];
-        if (data) {
-            NSMutableDictionary *modifiedData =
-            [NSJSONSerialization JSONObjectWithData:data
-                                            options:NSJSONReadingMutableContainers
-                                              error:nil];
-            
-            if ([modifiedData[@"stopRendering"] boolValue]) {
-                *stopRendering = YES;
+
+        NSMutableDictionary* modifiedData = nil;
+        if (resultData) {
+            NSData *data = [resultData dataUsingEncoding:NSUTF8StringEncoding];
+            if (data) {
+                NSMutableDictionary *modifiedData =
+                [NSJSONSerialization JSONObjectWithData:data
+                                                options:NSJSONReadingMutableContainers
+                                                  error:nil];
+
+                if ([modifiedData[@"stopRendering"] boolValue]) {
+                    *stopRendering = YES;
+                }
             }
         }
-    }
-    
-    if (!modifiedData) {
-        modifiedData = inAppNotificationData;
-    }
-    return modifiedData;
+
+        if (!modifiedData) {
+            modifiedData = inAppNotificationData;
+        }
+        return modifiedData;
+    */
+    return inAppNotificationData;
 }
 
 - (void)notificationShown:(NSMutableDictionary *)inAppNotificationData {
@@ -418,12 +425,7 @@ static WebEngagePlugin *webEngagePlugin;
 + (NSString *)evaluateJavaScript:(NSString *)script onWebView:(UIView *)webView {
     __block NSString* resultData = [[NSString alloc] init];
     
-    if ([webView isKindOfClass:UIWebView.class]) {
-        UIWebView *webview = (UIWebView*)webView;
-        resultData=[webview stringByEvaluatingJavaScriptFromString:script];
-    }
-    
-    else if ([webView isKindOfClass:WKWebView.class]) {
+    if ([webView isKindOfClass:WKWebView.class]) {
         WKWebView *webview = (WKWebView*)webView;
         [webview evaluateJavaScript:script completionHandler:^(id _Nullable result, NSError * _Nullable error) {
             resultData=result;
@@ -435,12 +437,7 @@ static WebEngagePlugin *webEngagePlugin;
 + (void) evaluateJavaScript:(NSString *)script onWebView:(id)webView
           completionHandler:(void (^ _Nullable)(NSString * _Nullable response, NSError * _Nullable error))completionHandler {
     
-    if ([webView isKindOfClass:UIWebView.class]) {
-        UIWebView *webview = (UIWebView*)webView;
-        NSString *response = [webview stringByEvaluatingJavaScriptFromString:script];
-        if (completionHandler)
-            completionHandler(response, nil);
-    } else if ([webView isKindOfClass:WKWebView.class]) {
+    if ([webView isKindOfClass:WKWebView.class]) {
         WKWebView *webview = (WKWebView*)webView;
         [webview evaluateJavaScript:script completionHandler:^(id result, NSError *error) {
             if (completionHandler) {

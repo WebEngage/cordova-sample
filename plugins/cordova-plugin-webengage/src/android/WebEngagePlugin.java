@@ -4,17 +4,12 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CallbackContext;
-import org.apache.cordova.PluginResult;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.Application;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.content.Context;
-import android.location.Location;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,11 +20,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
+
 import java.util.TimeZone;
-import java.util.GregorianCalendar;
-import java.util.Calendar;
+
 import java.util.Iterator;
 import java.util.Locale;
 
@@ -43,28 +36,26 @@ import com.webengage.sdk.android.callbacks.PushNotificationCallbacks;
 import com.webengage.sdk.android.actions.render.PushNotificationData;
 import com.webengage.sdk.android.actions.render.InAppNotificationData;
 import com.webengage.sdk.android.callbacks.InAppNotificationCallbacks;
-import com.webengage.sdk.android.callbacks.LifeCycleCallbacks;
-import com.webengage.sdk.android.utils.DataType;
 import com.webengage.sdk.android.UserProfile;
-import com.webengage.sdk.android.UserProfile.Builder;
 import com.webengage.sdk.android.utils.Gender;
 
-public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCallbacks, InAppNotificationCallbacks, LifeCycleCallbacks {
+
+public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCallbacks, InAppNotificationCallbacks {
     private static final String TAG = "WebEngagePlugin";
     private static CordovaWebView webView;
 
-    private Map<String,Object> pushOptions = new HashMap<String,Object>();
+    private Map<String, Object> pushOptions = new HashMap<String, Object>();
     private static final String PUSH_SOUND = "sound";
     private static final String PUSH_VIBRATION = "vibration";
     private static final String PUSH_SHOULD_RENDER = "shouldRender";
 
-    private Map<String,Object> inappOptions = new HashMap<String, Object> ();
+    private Map<String, Object> inappOptions = new HashMap<String, Object>();
     private static final String INAPP_SHOULD_RENDER = "shouldRender";
 
-    private Map<String,Object> globalOptions = new HashMap<String, Object>();
-    private static  String PENDING_PUSH_URI = null;
-    private static  JSONObject PENDING_PUSH_CUSTOM_DATA = null;
-    private static  boolean IS_PUSH_CALLBACK_PENDING = false;
+    private Map<String, Object> globalOptions = new HashMap<String, Object>();
+    private static String PENDING_PUSH_URI = null;
+    private static JSONObject PENDING_PUSH_CUSTOM_DATA = null;
+    private static boolean IS_PUSH_CALLBACK_PENDING = false;
     private static final String FIRST_NAME = "we_first_name";
     private static final String LAST_NAME = "we_last_name";
     private static final String EMAIL = "we_email";
@@ -89,16 +80,15 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
         this.webView = webView;
         Log.d(TAG, "Intialized");
     }
-    
+
     @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-        Logger.v(TAG,"Execute: " + action);
-        
+        Logger.v(TAG, "Execute: " + action);
+
         if ("engage".equals(action)) {
             WebEngage.registerPushNotificationCallback(this);
             WebEngage.registerInAppNotificationCallback(this);
-            WebEngage.registerLifeCycleCallback(this);
-            
+
             if (args != null && args.length() > 0 && args.get(0) instanceof JSONObject) {
                 // Dynamic config
                 JSONObject config = args.getJSONObject(0);
@@ -109,6 +99,38 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
                 }
                 if (!config.isNull("debug")) {
                     configBuilder.setDebugMode(config.optBoolean("debug"));
+                }
+
+                if (!config.isNull("smallIcon")) {
+                    String iconRes = config.optString("smallIcon");
+                    if (!iconRes.isEmpty()) {
+                        try {
+                            String[] iconResSplit = iconRes.split("\\.");
+                            String res = iconResSplit[1];
+                            String iconName = iconResSplit[2];
+                            int resId = cordova.getActivity().getApplicationContext().getResources().getIdentifier(iconName,
+                                    res, cordova.getActivity().getApplicationContext().getPackageName());
+                            configBuilder.setPushSmallIcon(resId);
+                        } catch (Exception e) {
+                            Logger.d("WebEngagePlugin", "Provide proper format for smallIcon: R.<res-dir>.<icon-name>");
+                        }
+                    }
+                }
+                if (!config.isNull("largeIcon")) {
+                    String iconRes = config.optString("largeIcon");
+                    if (!iconRes.isEmpty()) {
+                        try {
+                            String[] iconResSplit = iconRes.split("\\.");
+                            String res = iconResSplit[1];
+                            String iconName = iconResSplit[2];
+                            int resId = cordova.getActivity().getApplicationContext().getResources().getIdentifier(iconName,
+                                    res, cordova.getActivity().getApplicationContext().getPackageName());
+                            configBuilder.setPushLargeIcon(resId);
+                        } catch (Exception e) {
+                            Logger.d("WebEngagePlugin", "Provide proper format for smallIcon: R.<res-dir>.<icon-name>");
+                        }
+
+                    }
                 }
 
                 if (!config.isNull("android")) {
@@ -162,11 +184,11 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
         } else if ("track".equals(action)) {
             if (args.length() > 0 && !args.isNull(0)) {
                 String eventName = null;
-                Map<String,Object> attributes = null;
+                Map<String, Object> attributes = null;
                 eventName = args.getString(0);
                 if (args.length() == 2 && args.get(1) instanceof JSONObject) {
                     try {
-                        attributes = (Map<String, Object>)fromJSON(args.getJSONObject(1));
+                        attributes = (Map<String, Object>) fromJSON(args.getJSONObject(1));
                     } catch (JSONException e) {
 
                     }
@@ -188,7 +210,7 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
                 attributes = args.getJSONObject(0);
                 if (attributes != null) {
                     Iterator<String> iterator = attributes.keys();
-                    while( iterator .hasNext()) {
+                    while (iterator.hasNext()) {
                         String key = iterator.next();
                         try {
                             Object value = attributes.get(key);
@@ -207,18 +229,18 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
             } catch (JSONException e) {
 
             }
-            if (filteredCustomAttributes!= null && filteredCustomAttributes.size() > 0) {
+            if (filteredCustomAttributes != null && filteredCustomAttributes.size() > 0) {
                 WebEngage.get().user().setAttributes(filteredCustomAttributes);
             }
             WebEngage.get().user().setUserProfile(userProfileBuilder.build());
         } else if ("screenNavigated".equals(action)) {
             if (args.length() > 0) {
                 String screenName = null;
-                Map<String,Object> screenData = null;
+                Map<String, Object> screenData = null;
                 screenName = args.isNull(0) ? null : args.getString(0);
                 if (args.length() == 2 && args.get(1) instanceof JSONObject) {
                     try {
-                        screenData = (Map<String, Object>)fromJSON(args.getJSONObject(1));
+                        screenData = (Map<String, Object>) fromJSON(args.getJSONObject(1));
                     } catch (JSONException e) {
 
                     }
@@ -233,7 +255,7 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
                     if (screenData != null) {
                         WebEngage.get().analytics().setScreenData(screenData);
                     }
-                }  
+                }
             }
         } else if ("login".equals(action)) {
             if (args.length() == 1 && args.get(0) instanceof String) {
@@ -241,6 +263,10 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
             }
         } else if ("logout".equals(action)) {
             WebEngage.get().user().logout();
+        } else if ("setDevicePushOptIn".equals(action)) {
+            if (args.length() == 1 && args.get(0) instanceof Boolean) {
+                WebEngage.get().user().setDevicePushOptIn(args.getBoolean(0));
+            }
         }
 
         return true;
@@ -257,8 +283,8 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
             try {
                 String bDate = (String) value;
                 if (bDate.length() == "yyyy-MM-dd".length()) {
-                    int year = Integer.valueOf(bDate.substring(0,4));
-                    int month = Integer.valueOf(bDate.substring(5,7));
+                    int year = Integer.valueOf(bDate.substring(0, 4));
+                    int month = Integer.valueOf(bDate.substring(5, 7));
                     int day = Integer.valueOf(bDate.substring(8));
                     userProfileBuilder.setBirthDate(year, month, day);
                 }
@@ -280,53 +306,73 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
                 customAttr.put(key, value);
             } catch (JSONException e) {
 
-            } 
+            }
         }
     }
 
     @Override
     public void onStart() {
-        Logger.d(TAG,"Activity Start");
+        Logger.d(TAG, "Activity Start");
         WebEngage.get().analytics().start(cordova.getActivity());
         super.onStart();
     }
-    
+
     @Override
     public void onStop() {
-        Logger.d(TAG,"Activity Stop");
+        Logger.d(TAG, "Activity Stop");
         WebEngage.get().analytics().stop(cordova.getActivity());
         super.onStop();
     }
 
     @Override
     public PushNotificationData onPushNotificationReceived(Context context, PushNotificationData notificationData) {
-        if (pushOptions.get(PUSH_SOUND) != null && (Boolean)pushOptions.get(PUSH_SOUND) == true) {
+        if (pushOptions.get(PUSH_SOUND) != null && (Boolean) pushOptions.get(PUSH_SOUND) == true) {
             notificationData.setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION));
         }
-        if (pushOptions.get(PUSH_VIBRATION) != null && (Boolean)pushOptions.get(PUSH_VIBRATION) == true) {
+        if (pushOptions.get(PUSH_VIBRATION) != null && (Boolean) pushOptions.get(PUSH_VIBRATION) == true) {
             notificationData.setVibrateFlag(true);
         }
         if (pushOptions.get(PUSH_SHOULD_RENDER) != null) {
-            notificationData.setShouldRender((Boolean)pushOptions.get(PUSH_SHOULD_RENDER));
+            notificationData.setShouldRender((Boolean) pushOptions.get(PUSH_SHOULD_RENDER));
         }
         return notificationData;
     }
 
-    public static void handlePushClick(String uri, Bundle data) {
+    public static void handlePushClick(String uri, Bundle customData) {
         IS_PUSH_CALLBACK_PENDING = true;
         PENDING_PUSH_URI = uri;
-        PENDING_PUSH_CUSTOM_DATA = bundleToJson(data);
+        JSONObject data = bundleToJson(customData);
+        JSONObject pushPayload = null;
+        try {
+            if (customData != null && customData.containsKey("we_pushPayload")) {
+                pushPayload = new JSONObject(customData.getString("we_pushPayload"));
+                data.remove("we_pushPayload");
+                mergeJson(data, pushPayload);
+            }
+        } catch (JSONException e) {
+            Logger.e(TAG, "error merging json");
+        }
+        PENDING_PUSH_CUSTOM_DATA = data;
         Logger.d(TAG, "handlePushClick invoked");
     }
 
     @Override
     public void onPushNotificationShown(Context context, PushNotificationData notificationData) {
+//         String uri = notificationData.getPrimeCallToAction().getAction();
+//         JSONObject customData = bundleToJson(notificationData.getCustomData());
+//         webView.sendJavascript("javascript:webengage.push.onCallbackReceived( 'shown', '" + uri + "'," + customData + ");");
     }
 
     @Override
     public boolean onPushNotificationClicked(Context context, PushNotificationData notificationData) {
         String uri = notificationData.getPrimeCallToAction().getAction();
         JSONObject customData = bundleToJson(notificationData.getCustomData());
+        try {
+            customData = mergeJson(bundleToJson(notificationData.getCustomData()), notificationData.getPushPayloadJSON());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Logger.e(TAG, "Exception while merging JSON");
+        }
         webView.sendJavascript("javascript:webengage.push.onCallbackReceived( 'click', '" + uri + "'," + customData + ");");
         return false;
     }
@@ -335,6 +381,12 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
     public boolean onPushNotificationActionClicked(Context context, PushNotificationData notificationData, String buttonID) {
         String uri = notificationData.getCallToActionById(buttonID).getAction();
         JSONObject customData = bundleToJson(notificationData.getCustomData());
+        try {
+            customData = mergeJson(bundleToJson(notificationData.getCustomData()), notificationData.getPushPayloadJSON());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Logger.e(TAG, "Exception while merging JSON");
+        }
         webView.sendJavascript("javascript:webengage.push.onCallbackReceived( 'click', '" + uri + "'," + customData + ");");
         return false;
     }
@@ -347,8 +399,9 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
     @Override
     public InAppNotificationData onInAppNotificationPrepared(Context context, InAppNotificationData notificationData) {
         if (inappOptions.get(INAPP_SHOULD_RENDER) != null) {
-            notificationData.setShouldRender((Boolean)inappOptions.get(INAPP_SHOULD_RENDER));
+            notificationData.setShouldRender((Boolean) inappOptions.get(INAPP_SHOULD_RENDER));
         }
+        webView.sendJavascript("javascript:webengage.notification.onCallbackReceived( 'prepared', " + notificationData.getData() + ");");
         return notificationData;
     }
 
@@ -368,29 +421,10 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
         return false;
     }
 
-    @Override
-    public void onGCMRegistered(Context context, String regID) {
-        Logger.d(TAG, regID);
-    }
-
-    @Override
-    public void onGCMMessageReceived(Context context, Intent intent) {
-        Logger.d(TAG, intent.getExtras().toString());
-    }
-
-    @Override
-    public void onAppInstalled(Context context, Intent intent) {
-        Logger.d(TAG + "Install Referrer", intent.getExtras().getString("referrer"));
-    }
-
-    @Override
-    public void onAppUpgraded(Context context, int oldVersion, int newVersion) {
-    }
-
     private static JSONObject bundleToJson(Bundle bundle) {
         if (bundle != null) {
             JSONObject result = new JSONObject();
-            for(String key : bundle.keySet()) {
+            for (String key : bundle.keySet()) {
                 try {
                     result.put(key, bundle.get(key));
                 } catch (JSONException e) {
@@ -424,10 +458,10 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
         return obj;
     }
 
-    private Map<String, Object> toMap(JSONObject json) throws JSONException{
+    private Map<String, Object> toMap(JSONObject json) throws JSONException {
         Map<String, Object> map = new HashMap<String, Object>();
         Iterator<String> iterator = json.keys();
-        while(iterator.hasNext()) {
+        while (iterator.hasNext()) {
             String key = iterator.next();
             Object value = fromJSON(json.get(key));
             map.put(key, value);
@@ -435,12 +469,20 @@ public class WebEngagePlugin extends CordovaPlugin implements PushNotificationCa
         return map;
     }
 
-    private List<Object> toList(JSONArray jsonArray) throws JSONException {  
+    private List<Object> toList(JSONArray jsonArray) throws JSONException {
         List<Object> list = new ArrayList<Object>();
-        for(int i =0 ; i < jsonArray.length(); i++) {
+        for (int i = 0; i < jsonArray.length(); i++) {
             Object value = fromJSON(jsonArray.get(i));
             list.add(value);
         }
         return list;
+    }
+
+    private JSONObject mergeJson(JSONObject jsonObject1, JSONObject jsonObject2) throws JSONException {
+        for (Iterator<String> it = jsonObject2.keys(); it.hasNext(); ) {
+            String key = it.next();
+            jsonObject1.put(key, jsonObject2.get(key));
+        }
+        return jsonObject1;
     }
 }

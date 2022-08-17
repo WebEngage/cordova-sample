@@ -1,72 +1,49 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.webengage.cordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Cordova WebEngage Test</name>
-    <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+  <name>Cordova WebEngage Test</name>
+  <description>&#xD;
+        A sample Apache Cordova application that responds to the deviceready event.&#xD;
     </description>
-    <author email="ashwin.dinesh@webklipper.com" href="https://www.webengage.com/">
-        Ashwin
+  <author email="ashwin.dinesh@webklipper.com" href="https://www.webengage.com/">&#xD;
+        Ashwin&#xD;
     </author>
-    <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="cordova-plugin-webengage" spec="^1.0.0" />
-    <plugin name="cordova-plugin-android-fcm" spec="https://github.com/WebEngage/cordova-plugin-android-fcm.git" />
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <platform name="android">
-        <config-file parent="/manifest/application" target="AndroidManifest.xml">
-            <meta-data android:name="com.webengage.sdk.android.key" android:value="YOUR-LICENSE-CODE" />
-            <meta-data android:name="com.webengage.sdk.android.debug" android:value="true" />
-            <meta-data android:name="com.webengage.sdk.android.location_tracking" android:value="true" />
-            <meta-data android:name="com.webengage.sdk.android.alternate_interface_id" android:value="false" />
-            
-            <!-- For GCM (Deprecated) -->
-            <!-- Not required if using FCM -->
-            <!--
-            <meta-data android:name="com.webengage.sdk.android.auto_gcm_registration" android:value="true" />
-            <meta-data android:name="com.webengage.sdk.android.project_number" android:value="$GCM_PROJECT_NUMBER" />
-            
-            <receiver android:name="com.webengage.sdk.android.WebEngagePushReceiver" android:permission="com.google.android.c2dm.permission.SEND">
-                <intent-filter>
-                    <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-                    <category android:name="${applicationId}" />
-                </intent-filter>
-            </receiver>
-            -->
-        </config-file>
-        <config-file parent="/manifest" target="AndroidManifest.xml">
-            <!-- For GCM (Deprecated) -->
-            <!-- Not required if using FCM -->
-            <!--
-            <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-            <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
-            <permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-            -->
-
-            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-        </config-file>
-    </platform>
-    <platform name="ios">
-        <config-file parent="WEGLicenseCode" target="*-Info.plist">
-            <string>YOUR-LICENSE-CODE</string>
-        </config-file>
-        <config-file parent="WEGApnsAutoRegister" target="*-Info.plist">
-            <true />
-        </config-file>
-        <config-file parent="WEGLogLevel" target="*-Info.plist">
-            <string>VERBOSE</string>
-        </config-file>
-        <config-file parent="UIBackgroundModes" target="*Info.plist">
-            <array>
-                <string>location</string>
-            </array>
-        </config-file>
-    </platform>
-    <engine name="android" spec="^7.1.4" />
-    <engine name="ios" spec="^4.5.5" />
+  <content src="index.html"/>
+  <plugin name="cordova-plugin-whitelist" spec="1"/>
+  <plugin name="cordova-plugin-webengage" spec="^1.0.0"/>
+  <plugin name="cordova-plugin-android-fcm" spec="https://github.com/WebEngage/cordova-plugin-android-fcm.git"/>
+  <access origin="*"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="geo:*"/>
+  <platform name="android">
+    <config-file parent="/manifest/application" target="AndroidManifest.xml">
+      <meta-data android:name="com.webengage.sdk.android.key" android:value="YOUR-LICENSE-CODE"/>
+      <meta-data android:name="com.webengage.sdk.android.debug" android:value="true"/>
+      <meta-data android:name="com.webengage.sdk.android.location_tracking" android:value="true"/>
+      <meta-data android:name="com.webengage.sdk.android.alternate_interface_id" android:value="false"/>
+    </config-file>
+    <config-file parent="/manifest" target="AndroidManifest.xml">
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    </config-file>
+  </platform>
+  <platform name="ios">
+    <config-file parent="WEGLicenseCode" target="*-Info.plist">
+      <string>YOUR-LICENSE-CODE</string>
+    </config-file>
+    <config-file parent="WEGApnsAutoRegister" target="*-Info.plist">
+      <true/>
+    </config-file>
+    <config-file parent="WEGLogLevel" target="*-Info.plist">
+      <string>VERBOSE</string>
+    </config-file>
+    <config-file parent="UIBackgroundModes" target="*Info.plist">
+      <array>
+        <string>location</string>
+      </array>
+    </config-file>
+  </platform>
+  <engine name="ios" spec="^4.5.5"/>
 </widget>

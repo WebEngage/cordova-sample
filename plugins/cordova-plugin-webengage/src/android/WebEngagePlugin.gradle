@@ -12,7 +12,9 @@ allprojects {
     }
 }
 dependencies {
- 	compile 'com.webengage:android-sdk:3.+'
-	compile 'com.google.android.gms:play-services-gcm:+'
-	compile 'com.google.android.gms:play-services-location:+'
+    implementation fileTree(include: ['*.aar'], dir: 'libs')
+    compileOnly files("src/main/libs/android-sdk-debug.aar")
+
+    //api 'com.webengage:android-sdk:[3.20,)'
+
 }

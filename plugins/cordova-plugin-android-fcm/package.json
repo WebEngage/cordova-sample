@@ -1,7 +1,8 @@
 {
   "_from": "git+https://github.com/WebEngage/cordova-plugin-android-fcm.git",
-  "_id": "cordova-plugin-android-fcm@0.0.2",
+  "_id": "cordova-plugin-android-fcm@1.0.1",
   "_inBundle": false,
+  "_integrity": "",
   "_location": "/cordova-plugin-android-fcm",
   "_phantomChildren": {},
   "_requested": {
@@ -13,17 +14,14 @@
     "gitCommittish": null
   },
   "_requiredBy": [
-    "#USER",
-    "/"
+    "#DEV:/",
+    "#USER"
   ],
-  "_resolved": "git+https://github.com/WebEngage/cordova-plugin-android-fcm.git#04f37f66a82134b50160722693eefe92bec86a59",
+  "_resolved": "git+https://github.com/WebEngage/cordova-plugin-android-fcm.git#575a8b522a2f140c451fcadb5d313323ce975b0d",
   "_spec": "https://github.com/WebEngage/cordova-plugin-android-fcm.git",
-  "_where": "/Users/ashwin/cordova/WebEngageTest",
+  "_where": "/Users/AdityaS/GitHubSDK/cordova-sample",
   "author": {
-    "name": "Ashwin Dinesh"
-  },
-  "bugs": {
-    "url": "https://github.com/WebEngage/cordova-plugin-android-fcm/issues"
+    "name": "WebEngage"
   },
   "bundleDependencies": false,
   "cordova": {
@@ -45,5 +43,5 @@
     "type": "git",
     "url": "git+https://github.com/WebEngage/cordova-plugin-android-fcm.git"
   },
-  "version": "0.0.2"
+  "version": "1.0.1"
 }

@@ -56,12 +56,13 @@ WebEngagePushChannel.prototype.onClick = function (callback) {
 	this.clickCallback = callback;
 }
 
+
 WebEngagePushChannel.prototype.onCallbackReceived = function(type, uri, customData) {
 	if (type) {
 		switch(type) {
-			case 'shown' :
+			case 'shown':
 				break;
-			case 'click' :
+			case 'click':
 				this.clickCallback(uri, customData);
 				break;
 			case 'dismiss' :
@@ -74,6 +75,7 @@ function WebEngageNotificationChannel () {
 	this.shownCallback = function(){};
 	this.clickCallback = function(){};
 	this.dismissCallback = function(){};
+	this.preparedCallback = function(){};
 	this._options = {};
 }
 
@@ -93,6 +95,9 @@ WebEngageNotificationChannel.prototype.onClick = function (callback) {
 WebEngageNotificationChannel.prototype.onDismiss = function(callback) {
 	this.dismissCallback = callback;
 };
+WebEngageNotificationChannel.prototype.onPrepared = function(callback) {
+	this.preparedCallback = callback;
+};
 
 WebEngageNotificationChannel.prototype.onCallbackReceived = function(type, notificationData, actionId) {
 	if (type) {
@@ -105,6 +110,8 @@ WebEngageNotificationChannel.prototype.onCallbackReceived = function(type, notif
 				break;
 			case 'dismiss' :
 				this.dismissCallback(notificationData);
+			case 'prepared':
+				this.preparedCallback(notificationData);
 				break;
 		}
 	}
@@ -129,8 +136,13 @@ WebEngageUserChannel.prototype.setAttribute = function(key, value) {
 	}
 };
 
+
+WebEngageUserChannel.prototype.setDevicePushOptIn = function(optIn) {
+	exec(null, null, "WebEngagePlugin", "setDevicePushOptIn", [optIn]);
+};
+
 function isValidJavascriptObject(val) {
-	return val !== undefined && val != null && typeof val === 'object' 
+	return val !== undefined && val != null && typeof val === 'object'
 		&& Object.prototype.toString.call(val) === '[object Object]';
 }
 
