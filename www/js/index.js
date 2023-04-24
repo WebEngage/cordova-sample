@@ -72,7 +72,7 @@ var app = {
 app.initialize();
 
 function init() {
-
+    console.log("check this")
     var userid = window.localStorage.getItem("userid");
     if (userid != null && userid != "") {
         document.getElementById('userid-input').value = userid;
@@ -80,6 +80,14 @@ function init() {
     } else {
         document.getElementById('userid-input').value = "";
         document.getElementById('log-button').textContent = "LOGIN";
+    }
+
+    var devicePushStatus = window.localStorage.getItem("device-push-opt");
+    if(devicePushStatus == false){
+        document.getElementById("device-push-opt-button").checked = false;
+    }
+    else{
+        document.getElementById("device-push-opt-button").checked = true;
     }
 
     var pushStatus = window.localStorage.getItem("push-opt");
@@ -90,6 +98,45 @@ function init() {
         document.getElementById("push-opt-button").checked = true;
     }
 
+    var smsStatus = window.localStorage.getItem("sms-opt");
+    if(smsStatus == false){
+        document.getElementById("sms-opt-button").checked = false;
+    }
+    else{
+        document.getElementById("sms-opt-button").checked = true;
+    }
+
+    var emailStatus = window.localStorage.getItem("email-opt");
+    if(emailStatus == false){
+        document.getElementById("email-opt-button").checked = false;
+    }
+    else{
+        document.getElementById("email-opt-button").checked = true;
+    }
+
+    var inAppStatus = window.localStorage.getItem("inapp-opt");
+    if(inAppStatus == false){
+        document.getElementById("inapp-opt-button").checked = false;
+    }
+    else{
+        document.getElementById("inapp-opt-button").checked = true;
+    }
+
+    var whatsappStatus = window.localStorage.getItem("whatsapp-opt");
+    if(whatsappStatus == false){
+        document.getElementById("whatsapp-opt-button").checked = false;
+    }
+    else{
+        document.getElementById("whatsapp-opt-button").checked = true;
+    }
+
+    var viberStatus = window.localStorage.getItem("viber-opt");
+    if(viberStatus == false){
+        document.getElementById("viber-opt-button").checked = false;
+    }
+    else{
+        document.getElementById("viber-opt-button").checked = true;
+    }
 };
 
 document.getElementById("log-button").addEventListener("click", function() {
@@ -134,10 +181,57 @@ document.getElementById("buy-button").addEventListener("click", function() {
     webengage.track("Purchased", {"product-id": "123", "product-name": "wrist-watch", "product-price": 25.65});
 });
 
-document.getElementById("push-opt-button").addEventListener("click", function() {
-    console.log("Clicked on Opt");
-    var pushStatus = document.getElementById("push-opt-button").checked;
+document.getElementById("device-push-opt-button").addEventListener("click", function() {
+    console.log("Clicked on Device Push Opt");
+    var pushStatus = document.getElementById("device-push-opt-button").checked;
     webengage.user.setDevicePushOptIn(pushStatus);
-    window.localStorage.setItem("push-opt", pushStatus);
+    window.localStorage.setItem("device-push-opt", pushStatus);
+});
+
+document.getElementById("sms-opt-button").addEventListener("click", function() {
+    console.log("Clicked on sms Opt");
+    var status = document.getElementById("sms-opt-button").checked;
+    webengage.user.setUserOptIn("sms",status);
+    window.localStorage.setItem("sms-opt", status);
+});
+
+
+document.getElementById("email-opt-button").addEventListener("click", function() {
+    console.log("Clicked on email Opt");
+    var status = document.getElementById("email-opt-button").checked;
+    webengage.user.setUserOptIn("email",status);
+    window.localStorage.setItem("email-opt", status);
+});
+
+
+document.getElementById("push-opt-button").addEventListener("click", function() {
+    console.log("Clicked on push Opt");
+    var status = document.getElementById("push-opt-button").checked;
+    webengage.user.setUserOptIn("push",status);
+    window.localStorage.setItem("push-opt", status);
+});
+
+
+document.getElementById("inapp-opt-button").addEventListener("click", function() {
+    console.log("Clicked on inapp Opt");
+    var status = document.getElementById("inapp-opt-button").checked;
+    webengage.user.setUserOptIn("in_app",status);
+    window.localStorage.setItem("inapp-opt", status);
+});
+
+
+document.getElementById("whatsapp-opt-button").addEventListener("click", function() {
+    console.log("Clicked on whatsapp Opt");
+    var status = document.getElementById("whatsapp-opt-button").checked;
+    webengage.user.setUserOptIn("whatsapp",status);
+    window.localStorage.setItem("whatsapp-opt", status);
+});
+
+
+document.getElementById("viber-opt-button").addEventListener("click", function() {
+    console.log("Clicked on viber Opt");
+    var status = document.getElementById("viber-opt-button").checked;
+    webengage.user.setUserOptIn("viber",status);
+    window.localStorage.setItem("viber-opt", status);
 });
 
