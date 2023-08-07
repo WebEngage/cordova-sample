@@ -28,6 +28,14 @@ WebEngagePlugin.prototype.track = function(eventName, attributes) {
 	}
 }
 
+WebEngagePlugin.prototype.startGAIDTracking = function() {
+	if(cordova.platformId === "android"){
+		console.log("Platform is android. Starting GAID tracking")
+		exec(null, null, "WebEngagePlugin", "startGAIDTracking",[]);
+	}
+};
+
+
 WebEngagePlugin.prototype.screen = function(screenName, screenData) {
 	if (screenName !== undefined && (typeof screenName === 'string' || screenName instanceof String)) {
 		if (screenData === undefined) {
