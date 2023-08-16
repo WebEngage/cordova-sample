@@ -450,4 +450,39 @@ static WebEngagePlugin *webEngagePlugin;
     }
 }
 
+- (void)setUserOptIn:(CDVInvokedUrlCommand *)command {
+    CDVPluginResult* pluginResult = nil;
+    
+    NSString* ch = command.arguments && command.arguments.count>0 ? [command.arguments objectAtIndex:0] : nil;
+    BOOL status = command.arguments && command.arguments.count>1 ? [command.arguments objectAtIndex:1] : nil;
+    if(status==nil){
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+    }
+    else
+    {if ([ch isEqualToString:PUSH]) {
+        [[WebEngage sharedInstance].user setOptInStatusForChannel:WEGEngagementChannelPush status:status];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    } else if ([ch isEqualToString:SMS]) {
+        [[WebEngage sharedInstance].user setOptInStatusForChannel:WEGEngagementChannelSMS status:status];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    } else if ([ch isEqualToString:EMAIL]) {
+        [[WebEngage sharedInstance].user setOptInStatusForChannel:WEGEngagementChannelEmail status:status];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    } else if ([ch isEqualToString:IN_APP]) {
+        [[WebEngage sharedInstance].user setOptInStatusForChannel:WEGEngagementChannelInApp status:status];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    } else if ([ch isEqualToString:WHATSAPP]) {
+        [[WebEngage sharedInstance].user setOptInStatusForChannel:WEGEngagementChannelWhatsapp status:status];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    }else if ([ch isEqualToString:VIBER]) {
+            [[WebEngage sharedInstance].user setOptInStatusForChannel:WEGEngagementChannelViber status:status];
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    } else {
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+    }
+    }
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+
+}
+
 @end
