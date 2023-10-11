@@ -53,6 +53,10 @@ var app = {
         webengage.notification.onDismiss(function(inAppData) {
             console.log("In-app notification dismissed");
         });
+
+        webengage.jwtManager.ontokenInvalidatedCallback(function(errorMessage){
+            webengage.user.setSecureToken('sn_ios','eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiY3VpZCI6InNuX2lvcyIsImFkbWluIjp0cnVlLCJpYXQiOjE1MTYyMzkwMjJ9.Vssaf9-FgEzKWuZRM-n0f-52X6BV0xeSj-HNbdv_Faxy0tRXCiJFvK2M76MarG4fhlA1qcUmJ_-OhLdkBiP22CB-q7zo9gu-w3U5wADPFCelteM0fDH78QyCMQdJSRBHvrauB7SDcTyroQPNJ_CGQQl0yLLrTtYFSFqm9xkbDhzgODsVyZelN-vr7qIfr4isuWhgZZHCyLvpYdviSFiB7Jc5Rs-H7V5-aBMhYGnRGppgs35zqoO8Pjg8HjbTdFCcchIfx6-cBPv8UOVRoS6BESfJtKGcPDOt9FvjujW1oC3UTzLE4HxLva-OvDUxILviIycBwh7FMwPs2kL6tSKMSLsbt1hgCPU1XWPK4GBMHyu4orJbTvBvHJu_ARKWQBgD3y4XHzPPNW7-aulRV_Mq6IEOKlNPw3YrdgVCY6MRrThS3S2tlN4fe44JgUrWbAmQCbUim85Q9az9nz1Vs0spIzOzYWbmDemMtUfEa8vna00OTPyNaUGFxOLIZnfx3MbgfyY6YHv_V3YJH4BpW-jzAleYzZfjjkMja8UsDS2p_GM6ai9kHdqjRP_9ssaAl24pENBMgrevj-kMV_1S6uwbLv-MaaCyP6UeQw5SIkxu8HFgIJcGipXdIRnrnDSxonH_fgHQNhumQVeq-4kiIXbjlOcfnwDDl7jaZs55YRDmmBk')
+        });
         
         androidfcm.updateToken();
 
@@ -156,12 +160,16 @@ document.getElementById("log-button").addEventListener("click", function() {
     if (prevUserid === undefined || prevUserid === null || prevUserid === "") {
         var userid = document.getElementById('userid-input').value;
         if (userid != null && userid != "") {
+            var jwtToken = document.getElementById('jwtToken-input').value;
             window.localStorage.setItem("userid", userid);
             document.getElementById('log-button').textContent = "LOGOUT";
             document.getElementById('userid-input').value = userid;
-
-            // Login
-            webengage.user.login(userid);
+            if (jwtToken != null && jwtToken != ""){
+                webengage.user.login(userid,jwtToken);
+            } else {
+                // Login
+                webengage.user.login(userid);
+            }
         }
     } else {
         window.localStorage.setItem("userid", "");
