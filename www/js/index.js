@@ -178,10 +178,10 @@ document.getElementById("log-button").addEventListener("click", function() {
     }
 });
 
-document.getElementById("email-button").addEventListener("click", function() {
-    var email = document.getElementById("email-input").value;
-    if (email != null && email != "") {
-        webengage.user.setAttribute("we_email", email);
+document.getElementById("phone-button").addEventListener("click", function() {
+    var phone = document.getElementById("phone-input").value;
+    if (phone != null && phone != "") {
+        webengage.user.setAttribute("we_phone", phone);
     }
 });
 
@@ -261,4 +261,3 @@ document.getElementById("gaid-enable-button").addEventListener("click", function
         window.localStorage.setItem("gaid-enable", status);
     }
 });
-

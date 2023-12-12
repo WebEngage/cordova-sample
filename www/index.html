@@ -18,7 +18,7 @@
     under the License.
 -->
 <html>
-<head>
+  <head>
     <!--
      Customize this policy to fit your own app's needs. For more guidance, see:
      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
@@ -28,75 +28,81 @@
      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
      * Enable inline JS: add 'unsafe-inline' to default-src
      -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"
+    />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Hello World</title>
-</head>
-<body>
-<div class="app">
-    <h1>Apache Cordova</h1>
-    <div id="deviceready" class="blink">
+  </head>
+  <body>
+    <div class="app">
+      <h1>Apache Cordova</h1>
+      <div id="deviceready" class="blink">
         <p class="event listening">Connecting to Device</p>
         <p class="event received">Device is Ready</p>
+      </div>
+
+      <!-- user -->
+      <input type="text" id="userid-input" placeholder="user id" />
+      <button id="log-button" data-role="button">LOGIN</button>
+
+      <input type="text" id="phone-input" placeholder="user Phone Number" />
+      <button id="phone-button">SET</button>
+
+      <!-- event -->
+      <input type="text" id="event-input" placeholder="event" />
+      <button id="track-button">TRACK</button>
+
+      <button id="buy-button">BUY NOW</button>
+
+      <!-- device push opt in -->
+      <input type="checkbox" id="device-push-opt-button" />
+      <label for="device-push-opt-button">Device Push Opt In</label>
+      <br />
+
+      <!-- sms opt in -->
+      <input type="checkbox" id="sms-opt-button" />
+      <label for="sms-opt-button">SMS Opt In</label>
+      <br />
+
+      <!-- inApp opt in -->
+      <input type="checkbox" id="inapp-opt-button" />
+      <label for="inapp-opt-button">InApp Opt In</label>
+      <br />
+
+      <!-- push opt in -->
+      <input type="checkbox" id="push-opt-button" />
+      <label for="push-opt-button">Push Opt In</label>
+      <br />
+
+      <!-- email opt in -->
+      <input type="checkbox" id="email-opt-button" />
+      <label for="email-opt-button">EMAIL Opt In</label>
+      <br />
+
+      <!-- whatsapp opt in -->
+      <input type="checkbox" id="whatsapp-opt-button" />
+      <label for="whatsapp-opt-button">WHATSAPP Opt In</label>
+      <br />
+
+      <!-- viber opt in -->
+      <input type="checkbox" id="viber-opt-button" />
+      <label for="viber-opt-button">VIBER Opt In</label>
+      <br />
+
+      <!-- GAID opt in -->
+      <input type="checkbox" id="gaid-enable-button" />
+      <label for="gaid-enable-button">Enable GAID Tracking</label>
+      <br />
     </div>
-
-    <!-- user -->
-    <input type="text" id="userid-input" placeholder="user id" />
-    <button id="log-button" data-role="button">LOGIN</button>
-
-    <input type="text" id="email-input" placeholder="user email" />
-    <button id="email-button">SET</button>
-
-    <!-- event -->
-    <input type="text" id="event-input" placeholder="event"/>
-    <button id="track-button">TRACK</button>
-
-    <button id="buy-button">BUY NOW</button>
-
-    <!-- device push opt in -->
-    <input type="checkbox" id="device-push-opt-button"/>
-    <label for="device-push-opt-button">Device Push Opt In</label>
-    <br/>
-
-    <!-- sms opt in -->
-    <input type="checkbox" id="sms-opt-button"/>
-    <label for="sms-opt-button">SMS Opt In</label>
-    <br/>
-
-    <!-- inApp opt in -->
-    <input type="checkbox" id="inapp-opt-button"/>
-    <label for="inapp-opt-button">InApp Opt In</label>
-    <br/>
-
-    <!-- push opt in -->
-    <input type="checkbox" id="push-opt-button"/>
-    <label for="push-opt-button">Push Opt In</label>
-    <br/>
-
-    <!-- email opt in -->
-    <input type="checkbox" id="email-opt-button"/>
-    <label for="email-opt-button">EMAIL Opt In</label>
-    <br/>
-
-    <!-- whatsapp opt in -->
-    <input type="checkbox" id="whatsapp-opt-button"/>
-    <label for="whatsapp-opt-button">WHATSAPP Opt In</label>
-    <br/>
-
-    <!-- viber opt in -->
-    <input type="checkbox" id="viber-opt-button"/>
-    <label for="viber-opt-button">VIBER Opt In</label>
-    <br/>
-    
-    <!-- GAID opt in -->
-    <input type="checkbox" id="gaid-enable-button"/>
-    <label for="gaid-enable-button">Enable GAID Tracking</label>
-    <br/>
-</div>
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-</body>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
 </html>
